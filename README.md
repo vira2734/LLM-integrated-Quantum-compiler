@@ -82,3 +82,10 @@ deactivate
 ```
 
 Restart Jupyter (or refresh the launcher) and pick **"Python (satmapenv)"** from the kernel list.
+
+
+## References
+
+[1] Abtin Molavi, Amanda Xu, Martin Diges, Lauren Pick, Swamit Tannu, Aws Albarghouthi. **Qubit mapping and routing via MaxSAT.** Proceedings of the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO 22).
+
+This project builds on qqq-wisc/satmap
