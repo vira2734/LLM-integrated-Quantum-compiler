@@ -1,0 +1,16 @@
+OPENQASM 2.0;
+include "qelib1.inc";
+opaque custom4 q0,q1,q2,q3;
+qreg q[20];
+h q[2];
+cx q[9],q[1];
+ccx q[8],q[5],q[13];
+ccx q[7],q[4],q[2];
+ccx q[3],q[6],q[13];
+cx q[12],q[6];
+custom4 q[6],q[1],q[9],q[11];
+ccx q[7],q[1],q[11];
+cx q[3],q[12];
+h q[10];
+ccx q[15],q[1],q[6];
+custom4 q[6],q[5],q[9],q[11];
