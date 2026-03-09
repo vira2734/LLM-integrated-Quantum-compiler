@@ -25,7 +25,7 @@ else
 
   cd "$HOME/${REPO_DIR}"
 
-  if [[ ! -f "BREV-SETUP.md" ]] || [[ ! -f "requirements.txt" ]] || [[ ! -d "lib" ]]; then
+  if [[ ! -f "README.md" ]] || [[ ! -f "requirements.txt" ]] || [[ ! -d "lib" ]]; then
     echo "Error: expected repo root at $HOME/${REPO_DIR} but required files/dirs are missing." >&2
     exit 1
   fi
