@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Local model files
+asplos-2026/local_model/
