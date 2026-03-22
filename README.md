@@ -2,7 +2,7 @@
 
 **Presentation slides:** [ASPLOS slides](asplos-2026/ASPLOS-slides.pdf)
 
-## NVIDIA Brev launchable
+## NVIDIA Brev launchable setup and sample workflow run
 
 Set up your environment using NVIDIA Brev with this launchable:
 
@@ -10,7 +10,6 @@ Set up your environment using NVIDIA Brev with this launchable:
 
 After the launchable finishes provisioning and you are in the environment:
 
-1. Open Jupyter and go to `LLM-integrated-Quantum-compiler/asplos-2026/tutorial-full-compiler-run.ipynb`.
-2. Open that notebook.
-3. Choose **satmapenv** from the kernel / environment list (it may appear as **Python (satmapenv)**).
-4. Run all cells (for example **Run → Run All** in Jupyter).
+1. Navigate to `LLM-integrated-Quantum-compiler/asplos-2026/tutorial-full-compiler-run.ipynb`.
+2. Once the notebook is open in Jupyter, Choose **satmapenv** from the kernel / environment list (it may appear as **Python (satmapenv)**).
+3. Run all cells.
