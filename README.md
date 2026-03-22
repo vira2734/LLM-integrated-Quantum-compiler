@@ -1,91 +1,16 @@
-# Setup on NVIDIA Brev
+# Conversation to Compilation: LLM-Driven Quantum Compiler Synthesis
 
-SAT solver and Python environment setup for an NVIDIA Brev launchable instance.
+**Presentation slides:** [ASPLOS slides](asplos-2026/ASPLOS-slides.pdf)
 
-## 1. Open-WBO-Inc (SAT solver) setup
+## NVIDIA Brev launchable
 
-### 1.1 Get the repo
+Set up your environment using NVIDIA Brev with this launchable:
 
-If the launchable didn't clone your repo, clone it (from the Brev terminal / SSH):
+**[Launch on NVIDIA Brev](https://brev.nvidia.com/launchable/deploy?launchableID=env-3AhMy6PJDwlfvNNYggGRa4E4qlY)**
 
-```bash
-# If private repo (replace with your repo URL and token)
-git clone https://github.com/vira2734/LLM-integrated-Quantum-compiler.git
-cd LLM-integrated-Quantum-compiler
-```
+After the launchable finishes provisioning and you are in the environment:
 
-If the repo is already there:
-
-```bash
-cd /path/to/LLM-integrated-Quantum-compiler   # or wherever Brev put it, e.g. ~/LLM-integrated-Quantum-compiler
-```
-
-### 1.2 Pull the Open-WBO-Inc submodule
-
-```bash
-git submodule update --init --recursive
-```
-
-### 1.3 Install build dependencies (Ubuntu on Brev)
-
-```bash
-sudo apt-get update
-sudo apt-get install -y build-essential make libgmp-dev
-```
-
-- `build-essential` → g++, etc.
-- `make` → for the Makefile
-- `libgmp-dev` → GMP (Open-WBO-Inc needs it)
-
-### 1.4 Build the solver
-
-```bash
-cd lib/Open-WBO-Inc
-make r
-cd ../..
-```
-
-### 1.5 Verify
-
-```bash
-./lib/Open-WBO-Inc/open-wbo-inc_release --help
-```
-
----
-
-## 2. Python environment (satmapenv) setup
-
-```bash
-cd /path/to/LLM-integrated-Quantum-compiler   # your repo root
-
-# Python 3.11 (install if missing)
-sudo apt-get update
-sudo apt-get install -y python3.11 python3.11-venv python3.11-dev
-
-# Create venv and install deps
-python3.11 -m venv satmapenv
-source satmapenv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 2.1 Register as Jupyter kernel
-
-To make the environment visible in Jupyter's kernel list (Notebook / Console):
-
-```bash
-cd /path/to/LLM-integrated-Quantum-compiler
-source satmapenv/bin/activate
-pip install ipykernel
-python -m ipykernel install --user --name satmapenv --display-name "Python (satmapenv)"
-deactivate
-```
-
-Restart Jupyter (or refresh the launcher) and pick **"Python (satmapenv)"** from the kernel list.
-
-
-## References
-
-[1] Abtin Molavi, Amanda Xu, Martin Diges, Lauren Pick, Swamit Tannu, Aws Albarghouthi. **Qubit mapping and routing via MaxSAT.** Proceedings of the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO 22).
-
-This project builds on qqq-wisc/satmap
+1. Open Jupyter and go to `LLM-integrated-Quantum-compiler/asplos-2026/tutorial-full-compiler-run.ipynb`.
+2. Open that notebook.
+3. Choose **satmapenv** from the kernel / environment list (it may appear as **Python (satmapenv)**).
+4. Run all cells (for example **Run → Run All** in Jupyter).
