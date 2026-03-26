@@ -1,15 +1,18 @@
 # Conversation to Compilation: LLM-Driven Quantum Compiler Synthesis
 
-**Presentation slides:** [ASPLOS slides](asplos-2026/ASPLOS-slides.pdf)
+## Main Architecture Pipeline
 
-## References
+![Main architecture pipeline](asplos-2026/images/compiler-flow-diagram.png)
 
-- **SATMAP project:** [qqq-wisc/satmap](https://github.com/qqq-wisc/satmap)
-- **SATMAP paper:** [Qubit Mapping and Routing via MaxSAT (arXiv:2208.13679)](https://arxiv.org/abs/2208.13679)
-- **SABRE paper:** [Tackling the Qubit Mapping Problem for NISQ-Era Quantum Devices (arXiv:1809.02573)](https://arxiv.org/abs/1809.02573)
-- **Qiskit SABRE pass:** [SabreLayout documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.passes.SabreLayout)
+## Abstract
 
-## NVIDIA Brev launchable setup and sample workflow run
+Quantum compilers must map and route logical circuits onto hardware with limited connectivity, while minimizing SWAP overhead that increases depth and error. This is difficult because the search space grows combinatorially and hardware rules are rapidly changing across platforms (new topologies, native multi-qubit gates, and evolving constraints), forcing frequent compiler rewrites and slowing down research iteration. This project addresses that bottleneck with a conversation-to-compilation workflow: natural-language hardware constraints are translated by an LLM into a structured intermediate representation, then compiled into MaxSAT constraints so the existing SAT-based mapping framework can adapt quickly to new rules without hand-rewriting core compiler logic.
+
+## Presentation Slides
+
+[ASPLOS slides](asplos-2026/ASPLOS-slides.pdf)
+
+## NVIDIA Brev Launchable Setup
 
 Set up your environment using NVIDIA Brev with this launchable:
 
@@ -18,5 +21,12 @@ Set up your environment using NVIDIA Brev with this launchable:
 After the launchable finishes provisioning and you are in the environment:
 
 1. Navigate to `LLM-integrated-Quantum-compiler/asplos-2026/tutorial-full-compiler-run.ipynb`.
-2. Once the notebook is open in Jupyter, Choose **satmapenv** from the kernel / environment list (it may appear as **Python (satmapenv)**).
+2. Once the notebook is open in Jupyter, choose **satmapenv** from the kernel / environment list (it may appear as **Python (satmapenv)**).
 3. Run all cells.
+
+## References
+
+- **SATMAP project:** [qqq-wisc/satmap](https://github.com/qqq-wisc/satmap)
+- **SATMAP paper:** [Qubit Mapping and Routing via MaxSAT (arXiv:2208.13679)](https://arxiv.org/abs/2208.13679)
+- **SABRE paper:** [Tackling the Qubit Mapping Problem for NISQ-Era Quantum Devices (arXiv:1809.02573)](https://arxiv.org/abs/1809.02573)
+- **Qiskit SABRE pass:** [SabreLayout documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.passes.SabreLayout)
