@@ -2,6 +2,13 @@
 
 **Presentation slides:** [ASPLOS slides](asplos-2026/ASPLOS-slides.pdf)
 
+## References
+
+- **SATMAP project:** [qqq-wisc/satmap](https://github.com/qqq-wisc/satmap)
+- **SATMAP paper:** [Qubit Mapping and Routing via MaxSAT (arXiv:2208.13679)](https://arxiv.org/abs/2208.13679)
+- **SABRE paper:** [Tackling the Qubit Mapping Problem for NISQ-Era Quantum Devices (arXiv:1809.02573)](https://arxiv.org/abs/1809.02573)
+- **Qiskit SABRE pass:** [SabreLayout documentation](https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.passes.SabreLayout)
+
 ## NVIDIA Brev launchable setup and sample workflow run
 
 Set up your environment using NVIDIA Brev with this launchable:
